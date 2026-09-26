@@ -1,0 +1,40 @@
+{
+    // SELF-CONTAINED ON PURPOSE — every option is stated here rather than inherited, because this
+    // repository is a release of this directory and nothing above it: a config that reached upward
+    // would resolve to a file its readers do not have.
+    //
+    // `strict`, `noUncheckedIndexedAccess` and `exactOptionalPropertyTypes` are the three that
+    // decide how much this package is actually checked. They are asserted here rather than assumed,
+    // so that reading this file tells you the answer.
+    "compilerOptions": {
+        "target": "ES2022",
+        "lib": [
+            "ES2022"
+        ],
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "noUncheckedIndexedAccess": true,
+        "exactOptionalPropertyTypes": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "outDir": "dist",
+        "rootDir": "src",
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "dist",
+        "node_modules",
+        "tests"
+    ]
+}

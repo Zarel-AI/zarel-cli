@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "merkle_scheme": "rfc6962-sha256",
+  "window_anchors": [
+    {
+      "window_id": "2026061413",
+      "merkle_root_b64": "-UyZgFwT3LzlKjLp1kCYVDomQL_SiQWGQYZD_IT2HEs",
+      "leaf_count": 2,
+      "gen_time": "2026-06-14T13:00:05.000Z",
+      "tsa_token_b64": "MIIE+gYJKoZIhvcNAQcCoIIE6zCCBOcCAQMxDzANBglghkgBZQMEAgEFADBoBgsqhkiG9w0BCRABBKBZJFcEVTBTAgEBBgkrBgEEAYaNHwEwLzALBglghkgBZQMEAgEEIPlMmYBcE9y85Soy6dZAmFQ6JkC/0okFhkGGQ/yE9hxLAgFCGA8yMDI2MDYxNDEzMDAwNVqgggLNMIICyTCCAbOgAwIBAgIBAjALBgkqhkiG9w0BAQswFzEVMBMGA1UEAwwMTW9jayBSb290IENBMB4XDTI2MDEwMTAwMDAwMFoXDTMwMDEwMTAwMDAwMFowEzERMA8GA1UEAwwITW9jayBUU0EwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC6709MxA5iBx1L0EVFo8Rwg0f1RSyJH9HTc4glq68oXaZ9PPC7Q91JcXGjkOy/vmNqyZMZNhdkSvUB43wqLcqw8B3snMiO9htj1QAKH+pzqtK+kVZAiaqKY/zUTwe3rvab2xlWkfod2rQyTuqBBWQXFtd97ZetrBPJexT4UuopgOm3r7L02ZwLLQmYiTSR5IyVV84SV2lWjKmWo9/kW/v+7pFJrWAM4aSaNEYerg4LPqhjfbnxFkL6/UkFEzLxZ/mrnB773NFw4ayE+ACXh+aup6t69aZgQnZSifX4xi4tA7uaPyEWHREdqJaWlym5fusjd+LHheh+elDj4VMEY4phAgMBAAGjKDAmMAwGA1UdEwEB/wQCMAAwFgYDVR0lAQH/BAwwCgYIKwYBBQUHAwgwCwYJKoZIhvcNAQELA4IBAQCDL8BeGTsjT/m/tH4V8aQH34cGB2lTzQPb12bU+rtzvi06oA5i0WCYUN2EW/pXh6kJ2fUNK1pI0HtmoLw52V3mJLaFvrPZWbEhVJhKBQ3aGjDMNrra5pWbqN9jqMB5PMLTd1K5H9KoJvTQ3FKGbUrHlUW9X/yVcvo/EfrrsuJB8ht04QX3wnQGEl4WJoPiu0ewdDac2HXiSUpFpPS6YhlS9mqfh+oM+D7vjobGgi40f0xZJTgweVnjJcJABlLXRuz4jpTNoEDV0Ez/gbO+3YgSYci530TTI/IM26kEHNrSAg5LQHiVmeiS4kN2ji9NIC9E+EsYagtCTydyIYrVLrEjMYIBlDCCAZACAQEwHDAXMRUwEwYDVQQDDAxNb2NrIFJvb3QgQ0ECAQIwDQYJYIZIAWUDBAIBBQCgTTAaBgkqhkiG9w0BCQMxDQYLKoZIhvcNAQkQAQQwLwYJKoZIhvcNAQkEMSIEIJtgA4zp4X8NJH/WVe9HdfU2MI3M7ngN8gk9YUmbxCLRMAsGCSqGSIb3DQEBCwSCAQCtS2tVHP+iqjfEm9LeQt3sYlvKMHvvoGJt9SxTpM8fxaS3nWN0ffTn19Fhm8a/rpdLUsBeE/WfvT4mPQ6+gw07fi1tYyBI/j8Iw7ycfPklhkRwejbCX+t0d8iYRuKl+wTazA1iZ5B0w82HgbYUMSTpmylEO6XYv4/iUl5tY/5GaodcpmfGEdbiEyD5/pFr8pkaBctUkxsQky1KpjE6PNsgdmSDiXlTUHHt1z2c4NKes1m9SSC/anGFTEmxdltkrYeUYUDzgdosQ2w1/Y+I075/MlgxmaKiBZPhhils86a1AdV6QhDuz8NURLTzTGfAw1zJDU2JiWlpHE4uHtbG4Xh5"
+    }
+  ],
+  "inclusions": [
+    {
+      "log_name": "state_machine",
+      "window_id": "2026061413",
+      "checkpoint_hash_b64": "zVkNrg9pIhOFDetdVcnzcb_x8x5u-FR1riGl_kP2mv8",
+      "leaf_index": 0,
+      "path": [
+        {
+          "hash_b64": "O_H3467hMOB0LH5khPEUlaE-XdfQKPp6F6TRE1aL6kw",
+          "side": "R"
+        }
+      ]
+    },
+    {
+      "log_name": "state_machine",
+      "window_id": "2026061413",
+      "checkpoint_hash_b64": "DpUfo00D89ZSnMAhkKTPe81K4hNiZIEAQZyJWVbsz1g",
+      "leaf_index": 1,
+      "path": [
+        {
+          "hash_b64": "ztD9jY4GZLBiv6dn8jKTuepGoY3yMRylyuK0JHBb8aw",
+          "side": "L"
+        }
+      ]
+    }
+  ]
+}

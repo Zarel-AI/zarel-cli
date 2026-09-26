@@ -1,0 +1,114 @@
+{
+    "clean-5": {
+        "describes": "five well-formed events and NO checkpoint — internally consistent, cryptographically unanchored",
+        "archive": "clean-5.tgz",
+        "trustKeys": {
+            "schema_version": "1.0",
+            "keys": [
+                {
+                    "kid": "k_ff41cb12900dcb56",
+                    "algorithm": "Ed25519",
+                    "public_key_b64": "_0HLEpANy1YnDLzZlEgobH08M6VYVufqXovWql_5zlc"
+                }
+            ]
+        }
+    },
+    "clean-3": {
+        "describes": "three well-formed events and no checkpoint; the subject of the manifest.sig validity cases",
+        "archive": "clean-3.tgz",
+        "trustKeys": {
+            "schema_version": "1.0",
+            "keys": [
+                {
+                    "kid": "k_d69562ab547dd07b",
+                    "algorithm": "Ed25519",
+                    "public_key_b64": "1pViq1R90HseyrThZB_JQDgnxNjajg5hPd81FPo-5YM"
+                }
+            ]
+        }
+    },
+    "nested-root": {
+        "describes": "five events, preceded by an entry one directory below the archive root",
+        "archive": "nested-root.tgz",
+        "trustKeys": {
+            "schema_version": "1.0",
+            "keys": [
+                {
+                    "kid": "k_5141bf8b3651be54",
+                    "algorithm": "Ed25519",
+                    "public_key_b64": "UUG_izZRvlSQLQfskZomr9guFuBX0CtabEMWgKSmmQ4"
+                }
+            ]
+        }
+    },
+    "tampered-event": {
+        "describes": "five events with seq 3's content edited and its stored event_hash left alone, then re-signed over the tampered file so the content-hash check PASSES — the chain check is what must catch it",
+        "archive": "tampered-event.tgz",
+        "trustKeys": {
+            "schema_version": "1.0",
+            "keys": [
+                {
+                    "kid": "k_868a2e4558c10a94",
+                    "algorithm": "Ed25519",
+                    "public_key_b64": "hoouRVjBCpTxPI9wh5bIFnb4g-GJG7-dJUtEKbbpsz0"
+                }
+            ]
+        }
+    },
+    "seq-gap": {
+        "describes": "five events with seq 3 removed, so seq 4 follows seq 2",
+        "archive": "seq-gap.tgz",
+        "trustKeys": {
+            "schema_version": "1.0",
+            "keys": [
+                {
+                    "kid": "k_0dbf2c87480ec90d",
+                    "algorithm": "Ed25519",
+                    "public_key_b64": "Db8sh0gOyQ29bx9F7V_PkeFkDJONSrm-9yrJinmpOJU"
+                }
+            ]
+        }
+    },
+    "shadowed-events": {
+        "describes": "five signed events, plus an UNSIGNED two-event `x/events.json` placed earlier in the archive. The manifest covers only the root copy. A verdict that found its chain by basename would describe the shadow — two events — while integrity reported the five it never read",
+        "archive": "shadowed-events.tgz",
+        "trustKeys": {
+            "schema_version": "1.0",
+            "keys": [
+                {
+                    "kid": "k_a15b1399048a24ef",
+                    "algorithm": "Ed25519",
+                    "public_key_b64": "oVsTmQSKJO_cmvd9ou6WUQDYhvp7spYFCuByniUh2cU"
+                }
+            ]
+        }
+    },
+    "anchored-e2e": {
+        "describes": "the committed `anchored/` fixture — its checkpoints and anchors.json — packed into a signed bundle, so the end-to-end path can pull anchors.json back out of a real archive. Its events.json is empty: this case is about anchoring, and the chain verdict is asserted by the cases above",
+        "archive": "anchored-e2e.tgz",
+        "trustKeys": {
+            "schema_version": "1.0",
+            "keys": [
+                {
+                    "kid": "k_ed126b5b6228ff50",
+                    "algorithm": "Ed25519",
+                    "public_key_b64": "7RJrW2Io_1CKOHkZLimj43usXDk9Du1PAsZV653gb6U"
+                }
+            ]
+        }
+    },
+    "checkpointed-4": {
+        "describes": "four events anchored by a checkpoint signed at 2026-06-14T01:00:00.000Z; the validity-window cases put their trust-key window around that instant",
+        "archive": "checkpointed-4.tgz",
+        "trustKeys": {
+            "schema_version": "1.0",
+            "keys": [
+                {
+                    "kid": "k_0b56315d5dee6b4a",
+                    "algorithm": "Ed25519",
+                    "public_key_b64": "C1YxXV3ua0oXAzn8vmFfNTdfbZbkGVC25hoHcnuM6q4"
+                }
+            ]
+        }
+    }
+}

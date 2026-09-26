@@ -1,0 +1,26 @@
+[
+  {
+    "tenant_name": "demo_tenant",
+    "log_name": "state_machine",
+    "seq": 1,
+    "head_hash": "zVkNrg9pIhOFDetdVcnzcb_x8x5u-FR1riGl_kP2mv8",
+    "prev_checkpoint_hash": null,
+    "checkpoint_hash": "zVkNrg9pIhOFDetdVcnzcb_x8x5u-FR1riGl_kP2mv8",
+    "window_id": "2026061413",
+    "kid": "k1",
+    "signature_b64": "sig",
+    "signed_at": "2026-06-14T13:00:00.000Z"
+  },
+  {
+    "tenant_name": "demo_tenant",
+    "log_name": "state_machine",
+    "seq": 2,
+    "head_hash": "DpUfo00D89ZSnMAhkKTPe81K4hNiZIEAQZyJWVbsz1g",
+    "prev_checkpoint_hash": "zVkNrg9pIhOFDetdVcnzcb_x8x5u-FR1riGl_kP2mv8",
+    "checkpoint_hash": "DpUfo00D89ZSnMAhkKTPe81K4hNiZIEAQZyJWVbsz1g",
+    "window_id": "2026061413",
+    "kid": "k1",
+    "signature_b64": "sig",
+    "signed_at": "2026-06-14T13:00:00.000Z"
+  }
+]

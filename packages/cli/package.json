@@ -1,0 +1,61 @@
+{
+    "name": "@zarel-ai/cli",
+    "version": "0.2.1",
+    "description": "CLI for the Zarel API",
+    "license": "MIT",
+    "author": {
+        "name": "Nicolas Moreno",
+        "url": "https://zarel.ai"
+    },
+    "homepage": "https://zarel.ai",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Zarel-AI/zarel-cli.git",
+        "directory": "packages/cli"
+    },
+    "bin": {
+        "zarel": "./bin/zarel.js"
+    },
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "bin",
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "prepack": "npm run build",
+        "build": "rm -rf dist && tsc",
+        "test": "jest"
+    },
+    "dependencies": {
+        "@zarel-ai/audit-chain": "^1.0.0",
+        "@zarel-ai/audit-tsa": "^1.0.0",
+        "@zarel-ai/sdk": ">=0.6.0 <1",
+        "commander": "^12.1.0",
+        "libsodium-wrappers": "^0.7.13",
+        "tar-stream": "^3.1.7",
+        "yaml": "^2.3.4"
+    },
+    "devDependencies": {
+        "@types/jest": "^29.5.12",
+        "@types/libsodium-wrappers": "^0.7.14",
+        "@types/node": "^20.11.0",
+        "@types/tar-stream": "^3.1.4",
+        "jest": "^29.7.0",
+        "ts-jest": "^29.1.2",
+        "typescript": "^5.3.3"
+    },
+    "keywords": [
+        "zarel",
+        "zarel-ai",
+        "cli"
+    ]
+}
