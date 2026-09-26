@@ -171,7 +171,12 @@ async function extractTarGz(bytes: Uint8Array): Promise<ExtractedFiles> {
     return await new Promise<ExtractedFiles>((resolve, reject) => {
         extract.on('entry', (header, stream, next) => {
             const chunks: Buffer[] = [];
-            stream.on('data', (c: Buffer) => chunks.push(c));
+            // `c` is left to inference on purpose. `tar-stream` 3 is built on `streamx`, whose
+            // types declare a `data` payload as `unknown` — annotating it `Buffer` is rejected
+            // there, and this tree never saw it because its hoisted node_modules resolves
+            // different types than the ones this package DECLARES. A byte stream yields Buffers;
+            // the assertion says so once, where inference cannot.
+            stream.on('data', (c) => chunks.push(c as Buffer));
             stream.on('end', () => {
                 const data = new Uint8Array(Buffer.concat(chunks));
                 entries.set(header.name, data);
