@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
 // Copyright 2026 Nicolas Moreno
 /**
- * `zarel llm-credential ...` commands.
+ * `zarel runtime llm-credential ...` commands.
  *
- *   zarel llm-credential list
- *   zarel llm-credential get <name>
- *   zarel llm-credential set <name> --api-key-stdin [--base-url URL]
- *   zarel llm-credential unset <name>
+ *   zarel runtime llm-credential list
+ *   zarel runtime llm-credential get <name>
+ *   zarel runtime llm-credential set <name> --api-key-stdin [--base-url URL]
+ *   zarel runtime llm-credential unset <name>
  *
  * Security baseline:
  *   - `set` reads the api_key from STDIN. There is no `--api-key <value>` flag —
@@ -85,7 +85,7 @@ export function registerLlmCredentialCommands(program: Command): void {
         .action(async (name: string, opts: { baseUrl?: string }) => {
             try {
                 if (process.stdin.isTTY) {
-                    throw new Error('--api-key-stdin requires the api_key on STDIN, e.g. `echo "$KEY" | zarel llm-credential set primary --api-key-stdin`');
+                    throw new Error('--api-key-stdin requires the api_key on STDIN, e.g. `echo "$KEY" | zarel runtime llm-credential set primary --api-key-stdin`');
                 }
                 const apiKey = await readStdin();
                 if (!apiKey) {

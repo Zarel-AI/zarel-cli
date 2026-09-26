@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 // Copyright 2026 Nicolas Moreno
 /**
- * `zarel llm-service ...` commands.
+ * `zarel runtime llm-service ...` commands.
  *
  * Read-only over the LLM service catalog. The wire surface is always
  * actor-filtered (it never lists a service the caller may not use); privileged
